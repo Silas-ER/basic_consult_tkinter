@@ -121,7 +121,7 @@ try:
                 label = tk.Label(self, text="Insira a data final: ")
                 label.pack(pady=10)
                 self.data_finals = DateEntry(self, date_pattern="dd/mm/yyyy", datefont=('Helvetica', 10), width=12, selectbackground='gray80', locale='pt_BR')
-                self.data_finals.pack(pady=10) #ajusta a caixa de input automaticamente
+                self.data_finals.pack(pady=10) 
                 
                 botao_materiais = tk.Button(text="Gerar relatório", command=self.gerar_cartas)
                 botao_materiais.config(**button_style)
@@ -130,7 +130,7 @@ try:
                 back_button = tk.Button(self, text="<< Back to Menu", command=self.widgets)
                 back_button.pack(pady=10)
 
-            except Exception as e: #caso aconteça algum erro 
+            except Exception as e: 
                 messagebox.showerror("Erro", f"Ocorreu um erro ao carregar calendário\n{str(e)}")
             
         def limpar_tela(self):

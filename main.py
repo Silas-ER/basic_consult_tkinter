@@ -101,7 +101,7 @@ try:
                 result = pd.read_sql(consulta_mat, connect)
                 result.to_excel(r"\\servidor\Exportação2\Beto\CARTAS_DE_ORDEM\RELACAO_NF_CARTAS_{}.xlsx".format(data2m_formatada), index=False)
                 messagebox.showinfo("Sucesso","Consulta realizada com sucesso!") 
-            except Exception as e: #caso aconteça algum erro 
+            except Exception as e:
                 messagebox.showerror("Erro", f"Ocorreu um erro ao executar a consulta:\n{str(e)}")
 
         
@@ -116,7 +116,7 @@ try:
                 label = tk.Label(self, text="Insira a data inicial: ")
                 label.pack(pady=10)
                 self.data_inicials = DateEntry(self, date_pattern="dd/mm/yyyy", datefont=('Helvetica', 10), width=12, selectbackground='gray80', locale='pt_BR')
-                self.data_inicials.pack(pady=10) #ajusta a caixa de input automaticamente
+                self.data_inicials.pack(pady=10) 
 
                 label = tk.Label(self, text="Insira a data final: ")
                 label.pack(pady=10)
